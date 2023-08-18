@@ -1,0 +1,35 @@
+team -(done)
+counter/fun fact -(done)
+process -(done)
+pricing table - (done)
+testimonial - (done)
+subscribe - (done)
+logo/sponsors/clients - (Done)
+cta/promo box - (Done)
+service- (Done)
+
+about
+highlight box
+
+faq/accordion
+gallery
+alert box
+button
+
+
+
+// ==ClosureCompiler==
+// @output_file_name default.js
+// @compilation_level SIMPLE_OPTIMIZATIONS
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/jquery.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/bootstrap.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/wow.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/jquery.backTop.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/waypoints.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/waypoints-sticky.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/owl.carousel.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/jquery.stellar.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/jquery.counterup.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/venobox.min.js
+// @code_url http://templates.bwlthemes.com/2017/repair_geek/js/custom-scripts.js
+// ==/ClosureCompiler==

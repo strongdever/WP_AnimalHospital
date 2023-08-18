@@ -1,0 +1,67 @@
+@mixin round($radius: 5px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: 	 $radius;
+    border-radius: 	 $radius;
+
+    -webkit-background-clip: padding-box;
+    -moz-background-clip:    padding;
+    background-clip: 	    padding-box;
+}
+
+@mixin drop-shadow($x: 0, $y: 0, $blur: 5px, $spread: 0, $alpha: .16) {
+    -webkit-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: 	$x $y $blur $spread rgba(0, 0, 0, $alpha);
+    box-shadow:			$x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+
+@mixin inner-shadow($x: 0, $y: 0, $blur: 5px, $spread: 0, $alpha: .2) {
+    -webkit-box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: 	inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+    box-shadow:			inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+
+@mixin gradient ($from, $to) {
+    background-color: $from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background-image: -webkit-linear-gradient(top, $from, $to);
+    background-image:    -moz-linear-gradient(top, $from, $to);
+    background-image:      -o-linear-gradient(top, $from, $to);
+    background-image:         linear-gradient(to bottom, $from, $to);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin text-shadow($x1:2px, $y1:2px, $blur1:5px, $color1:black, $x2:null, $y2:null, $blur2:null, $color2:null){
+    @if ($x2) {
+        text-shadow: $x1 $y1 $blur1 $color1, $x2 $y2 $blur2 $color2; 
+    }
+    @else {
+        text-shadow: $x1 $y1 $blur1 $color1;
+    }
+}
+
+@mixin transition($property: color, $duration: .2s) {
+    -webkit-transition: $property $duration ease-in-out;
+    -moz-transition: $property $duration ease-in-out;
+    -o-transition: $property $duration ease-in-out;
+    transition: $property $duration ease-in-out;
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+}
