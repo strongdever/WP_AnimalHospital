@@ -1740,7 +1740,7 @@ a.nav-btn-highlight {
     background: #FCB040; }
 
 .section-heading-wrapper {
-  margin-bottom: 32px; }
+  margin-bottom: 4.4rem; }
   .section-heading-wrapper h4 {
     font-weight: 400;
     font-size: 20px;
@@ -2652,20 +2652,11 @@ ul.custom-bullet-list {
       position: relative;
       display: block;
       padding-top: 6px;
-      margin-bottom: 16px;
+      margin-bottom: 0.4rem;
       font-size: 20px; }
-      .highlight-layout-2 .highlight-text h5:after,
-      .highlight-layout-2 .highlight-text h5 a:after {
-        position: absolute;
-        bottom: -12px;
-        left: 0;
-        width: 32px;
-        height: 1px;
-        background: #FCB040;
-        content: ''; }
     .highlight-layout-2 .highlight-text div {
-      margin-top: 24px;
-      line-height: 24px;
+      margin-top: 0.6rem;
+      line-height: 1.6rem;
       color: #717171; }
   .highlight-layout-2:hover .highlight-icon {
     top: 12px; }
@@ -4121,343 +4112,35 @@ a.btn-cta-2 {
     color: #FCB040; }
 
 /*----- SECTION APPOINTMENT ----*/
-.appointment-form-wrapper {
-  background: #FFFFFF;
-  padding: 0px 0px 28px;
-  margin-bottom: 0px;
-  border: 1px solid #f2f2f2;
-  -webkit-box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.05);
-  /*----- LIGHT LAYOUT OF APPOINTMENT FORM ----*/ }
-  .appointment-form-wrapper .appointment-form-heading {
-    position: relative;
-    background: #2A100F;
-    padding: 30px;
-    margin: -1px -1px 48px -1px; }
-    .appointment-form-wrapper .appointment-form-heading .form-title {
-      position: relative;
-      clear: both;
-      overflow: hidden;
-      font-size: 24px;
-      font-weight: 600;
-      color: #FFFFFF;
-      letter-spacing: 0em;
-      margin: 0;
-      text-transform: uppercase; }
-  .appointment-form-wrapper .appoinment-form {
-    padding: 0 12px; }
-    .appointment-form-wrapper .appoinment-form .form-control {
-      font-size: 14px; }
-    .appointment-form-wrapper .appoinment-form .form-group {
-      margin-bottom: 0;
-      position: relative; }
-      .appointment-form-wrapper .appoinment-form .form-group i {
-        position: absolute;
-        top: 12px;
-        right: 32px;
-        font-size: 17px;
-        color: #e6e6e6;
-        transition: all 0.5s ease 0s; }
-    .appointment-form-wrapper .appoinment-form .form-control::-moz-placeholder {
-      color: #a4a4a4;
-      font-size: 14px;
-      text-transform: uppercase; }
-    .appointment-form-wrapper .appoinment-form input[type=text],
-    .appointment-form-wrapper .appoinment-form input[type=email],
-    .appointment-form-wrapper .appoinment-form input[type=url],
-    .appointment-form-wrapper .appoinment-form input[type=password] {
-      color: #a4a4a4;
-      border: 1px solid #ebebeb;
-      line-height: 42px;
-      padding-right: 32px;
-      height: 42px;
-      margin-bottom: 24px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -webkit-transition: 0.3s 0.2s ease-in-out;
-      -moz-transition: 0.3s 0.2s ease-in-out;
-      -o-transition: 0.3s 0.2s ease-in-out;
-      transition: 0.3s 0.2s ease-in-out; }
-      .appointment-form-wrapper .appoinment-form input[type=text]:focus,
-      .appointment-form-wrapper .appoinment-form input[type=email]:focus,
-      .appointment-form-wrapper .appoinment-form input[type=url]:focus,
-      .appointment-form-wrapper .appoinment-form input[type=password]:focus {
-        border: 1px solid #CCCCCC;
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2); }
-    .appointment-form-wrapper .appoinment-form textarea {
-      color: #a4a4a4;
-      border: 0px;
-      border: 1px solid #ebebeb;
-      padding-left: 2px;
-      margin-bottom: 24px;
-      padding: 6px 12px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -webkit-transition: 0.3s 0.2s ease-in-out;
-      -moz-transition: 0.3s 0.2s ease-in-out;
-      -o-transition: 0.3s 0.2s ease-in-out;
-      transition: 0.3s 0.2s ease-in-out; }
-      .appointment-form-wrapper .appoinment-form textarea:focus {
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        border: 1px solid #CCCCCC; }
-    .appointment-form-wrapper .appoinment-form select {
-      border: 0px;
-      border: 1px solid #ebebeb;
-      padding-left: 2px;
-      margin-bottom: 24px;
-      padding: 6px 12px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -webkit-transition: 0.3s 0.2s ease-in-out;
-      -moz-transition: 0.3s 0.2s ease-in-out;
-      -o-transition: 0.3s 0.2s ease-in-out;
-      transition: 0.3s 0.2s ease-in-out; }
-      .appointment-form-wrapper .appoinment-form select:focus {
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        border: 1px solid #CCCCCC; }
-    .appointment-form-wrapper .appoinment-form .select-style {
-      position: relative; }
-      .appointment-form-wrapper .appoinment-form .select-style select.form-control {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        position: relative;
-        background-image: url("../images/down_arrow.png");
-        background-position: 100% 4px;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        box-shadow: none;
-        color: #a4a4a4;
-        padding: 6px 12px;
-        height: 42px;
-        line-height: 32px;
-        margin-bottom: 24px;
-        font-size: 14px; }
-  .appointment-form-wrapper.light-layout .appointment-form-heading {
-    background: transparent;
-    padding: 42px 24px 0 24px;
-    position: relative;
-    margin: -1px -1px 48px -1px;
-    /*----- For Left Alignmnent ----*/ }
-    .appointment-form-wrapper.light-layout .appointment-form-heading .form-title + p {
-      margin-top: 16px;
-      font-size: 18px;
-      line-height: 24px; }
-    .appointment-form-wrapper.light-layout .appointment-form-heading .form-title {
-      position: relative;
-      clear: both;
-      font-size: 32px;
-      font-weight: 600;
-      color: #646464;
-      letter-spacing: 0em;
-      margin: 0 0 0px 0;
-      padding-bottom: 32px; }
-      .appointment-form-wrapper.light-layout .appointment-form-heading .form-title:after {
-        width: 60px;
-        height: 5px;
-        position: absolute;
-        content: '';
-        left: 50%;
-        top: 60px;
-        margin-left: -30px;
-        background: #FCB040; }
-    .appointment-form-wrapper.light-layout .appointment-form-heading.text-left {
-      clear: both; }
-      .appointment-form-wrapper.light-layout .appointment-form-heading.text-left .form-title:after {
-        left: 0;
-        margin-left: 0px;
-        background: #FCB040; }
-  .appointment-form-wrapper.light-layout .appoinment-form {
-    padding: 0 12px; }
-    .appointment-form-wrapper.light-layout .appoinment-form .form-control {
-      font-size: 13px; }
-    .appointment-form-wrapper.light-layout .appoinment-form .form-group {
-      margin-bottom: 0;
-      position: relative; }
-      .appointment-form-wrapper.light-layout .appoinment-form .form-group label {
-        font-weight: 600;
-        margin-bottom: 6px;
-        margin-top: 0; }
-      .appointment-form-wrapper.light-layout .appoinment-form .form-group i {
-        position: absolute;
-        top: 48px;
-        right: 32px;
-        font-size: 17px;
-        color: #cccccc;
-        transition: all 0.5s ease 0s; }
-    .appointment-form-wrapper.light-layout .appoinment-form .form-control::-moz-placeholder {
-      color: #a4a4a4;
-      font-size: 14px;
-      text-transform: uppercase; }
-    .appointment-form-wrapper.light-layout .appoinment-form input[type=text],
-    .appointment-form-wrapper.light-layout .appoinment-form input[type=email],
-    .appointment-form-wrapper.light-layout .appoinment-form input[type=url],
-    .appointment-form-wrapper.light-layout .appoinment-form input[type=password] {
-      background: whitesmoke;
-      color: #a4a4a4;
-      border: 1px solid transparent;
-      line-height: 42px;
-      padding-right: 32px;
-      height: 42px;
-      margin-bottom: 24px;
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      border-radius: 0px;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -webkit-transition: 0.3s 0.2s ease-in-out;
-      -moz-transition: 0.3s 0.2s ease-in-out;
-      -o-transition: 0.3s 0.2s ease-in-out;
-      transition: 0.3s 0.2s ease-in-out; }
-      .appointment-form-wrapper.light-layout .appoinment-form input[type=text]:focus,
-      .appointment-form-wrapper.light-layout .appoinment-form input[type=email]:focus,
-      .appointment-form-wrapper.light-layout .appoinment-form input[type=url]:focus,
-      .appointment-form-wrapper.light-layout .appoinment-form input[type=password]:focus {
-        border: 1px solid transparent;
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2); }
-    .appointment-form-wrapper.light-layout .appoinment-form textarea {
-      background: whitesmoke;
-      color: #a4a4a4;
-      border: 1px solid transparent;
-      padding-left: 2px;
-      margin-bottom: 24px;
-      padding: 6px 12px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -webkit-transition: 0.3s 0.2s ease-in-out;
-      -moz-transition: 0.3s 0.2s ease-in-out;
-      -o-transition: 0.3s 0.2s ease-in-out;
-      transition: 0.3s 0.2s ease-in-out; }
-      .appointment-form-wrapper.light-layout .appoinment-form textarea:focus {
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        border: 1px solid transparent; }
-    .appointment-form-wrapper.light-layout .appoinment-form select {
-      border: 0px;
-      border: 1px solid #bfbfbf;
-      padding-left: 2px;
-      margin-bottom: 24px;
-      padding: 6px 12px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-      -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-      -webkit-transition: 0.3s 0.2s ease-in-out;
-      -moz-transition: 0.3s 0.2s ease-in-out;
-      -o-transition: 0.3s 0.2s ease-in-out;
-      transition: 0.3s 0.2s ease-in-out; }
-      .appointment-form-wrapper.light-layout .appoinment-form select:focus {
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-        border: 1px solid #CCCCCC; }
-    .appointment-form-wrapper.light-layout .appoinment-form .select-style {
-      position: relative; }
-      .appointment-form-wrapper.light-layout .appoinment-form .select-style select.form-control {
-        border: 0px solid #bfbfbf;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        position: relative;
-        background-image: url("../images/down_arrow.png");
-        background-position: 100% 4px;
-        background-repeat: no-repeat;
-        background-color: #f5f5f5;
-        cursor: pointer;
-        box-shadow: none;
-        color: #a4a4a4;
-        padding: 6px 12px;
-        height: 42px;
-        line-height: 32px;
-        margin-bottom: 24px;
-        font-size: 14px; }
-    .appointment-form-wrapper.light-layout .appoinment-form .error {
-      position: relative;
-      top: -16px;
-      font-style: italic;
-      color: tomato; }
+.form-title {
+  margin-bottom: 2.4rem;
+}
 
+.calendar-schedule {
+  margin-bottom: 4.4rem;
+}
+
+.schedule-wrapper {
+  display: block;
+  margin: auto 0;
+}
+
+.schedule-wrapper .highlight-text {
+  margin-bottom: 0.6rem;
+}
+.schedule-wrapper .highlight-text a {
+  color: #a24b03;
+}
+.schedule-wrapper .highlight-text a:hover {
+  color: #FCB040;
+}
+.map-part .form-title {
+  text-align: right;
+}
+.map-part .google-map iframe {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
 .appoinment-person {
   position: relative;
   top: 8px; }

@@ -24,6 +24,8 @@
         <link href="css/animate.css" rel="stylesheet" type="text/css" />
         <link href="css/venobox.css" rel="stylesheet" type="text/css" />
         <link href="css/styles.css"  rel="stylesheet" type="text/css"/>
+        <link href="css/calendar.css"  rel="stylesheet" type="text/css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css"/>
     </head> 
 
     <body> 
@@ -261,11 +263,174 @@
         
         <!-- SECTION HIGHLIGHTS 03-->
         
-        <section class="section-content-block section-pure-white-bg"  id="highlights-3">
+        <section class="section-content-block section-pure-white-bg map-schedule"  id="highlights-3">
             <div class="container">
+                
+                <div class="row section-heading-wrapper">
+
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <h4 class="heading-alt-style text-capitalize text-dark-color">地図・診療時間</h4>
+                    </div> <!-- end .col-sm-12  --> 
+
+                </div>
+
+                <div class="row calendar-schedule">
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2 class="form-title">
+                            日程カレンダー
+                        </h2>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 calendar-wrapper">
+
+                        <div id="custom-calendar">
+                            
+                            <div class="light">
+
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <span class="month-picker" id="month-picker">April</span>
+                                        <div class="year-picker">
+                                            <span class="year-change" id="prev-year">
+                                                <pre><i class="fa fa-angle-left" style="font-size:36px"></i></pre>
+                                            </span>
+                                            <span id="year">2022</span>
+                                            <span class="year-change" id="next-year">
+                                                <pre><i class="fa fa-angle-right" style="font-size:36px"></i></pre>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-body">
+                                        <div class="calendar-week-day">
+                                            <div>日</div>
+                                            <div>月</div>
+                                            <div>火</div>
+                                            <div>水</div>
+                                            <div>木</div>
+                                            <div>金</div>
+                                            <div>土</div>
+                                        </div>
+                                        <div class="calendar-days"></div>
+                                    </div>
+                                    
+                                    <div class="month-list"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div> <!--  end .col-lg-6 -->   
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 schedule-wrapper">
+                        
+                        <div class="row">
+                            
+                            <div class="col-12">
+                                <div class="highlight-layout-2">
+                                    
+                                    <div class="highlight-text">
+                                        <h5>診療時間</h5>
+                                        <div>9:00 ~ 12:00 / 16:00 ~ 19:00</div>
+                                    </div> <!-- end .service-text  -->
+                                    <div class="highlight-text">
+                                        <h5>休診日</h5>
+                                        <div>毎週火曜日、祝日</div>
+                                    </div> <!-- end .service-text  -->
+                                    <div class="highlight-text">
+                                        <h5>カレンダーの記号</h5>
+                                        <div>〇：診療</div>
+                                        <div>ー：休診</div>
+                                        <div>△：お知らせ（<a href="./news.html">新着情報</a>をご確認ください）</div>
+                                    </div> <!-- end .service-text  -->
+
+                                </div> <!-- end .service-item  -->
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                                     
+                    
+                </div> <!--  end .row  -->         
+
+                <div class="row map-part">
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2 class="form-title">
+                            地図
+                        </h2>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 google-map">
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.776297901604!2d139.37069027577573!3d35.41079507267569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601854d0fed77f71%3A0x9e0a8cc6e370739e!2s1-ch%C5%8Dme-31-7%20Nakano%2C%20Ebina%2C%20Kanagawa%20243-0425%2C%20Japan!5e0!3m2!1sen!2sus!4v1692432546481!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                                     
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map-wrapper">
+
+                        <div class="highlight-text">
+                            <h5>所在地: 〒243-0425</h5>
+                            <div>神奈川県海老名市中野1-31-7</div>
+                        </div> <!-- end .service-text  -->
+                        <div class="highlight-text">
+                            <h5>最寄駅</h5>
+                            <div>JR相模線門沢橋駅から徒歩約13分</div>
+                        </div> <!-- end .service-text  -->
+
+                    </div> <!--  end .col-lg-6 -->   
+
+                </div> <!--  end .row  -->  
                 
                 <div class="row">
                     
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+
+                        <h2 class="form-title">
+                            地図
+                        </h2>
+
+                        <div class="container">
+                            <div id="custom-calendar">
+                                
+                                <div class="light">
+
+                                    <div class="calendar">
+                                        <div class="calendar-header">
+                                            <span class="month-picker" id="month-picker">April</span>
+                                            <div class="year-picker">
+                                                <span class="year-change" id="prev-year">
+                                                    <pre><i class="fa fa-angle-left" style="font-size:36px"></i></pre>
+                                                </span>
+                                                <span id="year">2022</span>
+                                                <span class="year-change" id="next-year">
+                                                    <pre><i class="fa fa-angle-right" style="font-size:36px"></i></pre>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-body">
+                                            <div class="calendar-week-day">
+                                                <div>日</div>
+                                                <div>月</div>
+                                                <div>火</div>
+                                                <div>水</div>
+                                                <div>木</div>
+                                                <div>金</div>
+                                                <div>土</div>
+                                            </div>
+                                            <div class="calendar-days"></div>
+                                        </div>
+                                        
+                                        <div class="month-list"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!--  end .col-lg-6 -->   
+
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         
                         <div class="row section-heading-wrapper margin-bottom-12">
@@ -349,65 +514,9 @@
                         </div>
 
                     </div>
+                                     
                     
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
-
-                        <div class="appointment-form-wrapper light-layout clearfix">
-                            
-                            <div class="appointment-form-heading text-left">
-                                <h2 class="form-title">
-                                    Request A Booking
-                                </h2>
-                                
-                                <p>
-                                    Please fill out the booking form and soon we will contact you to schedule an appointment.
-                                </p>
-                                
-                            </div>
-                            
-                            <form class="appoinment-form"> 
-
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="form-group col-12">
-                                            <input id="your_name" class="form-control" placeholder="Name" type="text"  required="" data-msg="This field is required.">
-                                        </div>
-                                        <div class="form-group col-12">
-                                            <input id="your_email" class="form-control" placeholder="Email" type="email"  required="" data-msg="This field is required.">
-                                        </div>
-                                        <div class="form-group col-12">
-                                            <input id="your_phone" class="form-control" placeholder="Phone" type="text"  required="" data-msg="This field is required.">
-                                        </div>
-                                        
-                                        <div class="form-group col-12">
-                                            <div class="select-style">                                    
-                                                <select class="form-control" name="your_service_type" id="your_service_type"  required="">
-                                                    <option value="">AVAILABLE SERVICES</option>
-                                                    <option value="processor_repair">Cat Vaccinations</option>
-                                                    <option value="laptop_repair">Dog Healthcare</option>
-                                                    <option value="ram_installation">Guinea-Pig Care</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group col-12">
-                                            <textarea id="textarea_message" class="form-control" rows="4" placeholder="Your Message..."  required="" data-msg="This field is required."></textarea>
-                                        </div>         
-
-                                        <div class="form-group col-12 text-center">
-                                            <button id="btn_submit" class="btn btn-lg btn-theme btn-theme-invert" type="submit">Get Appointment</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </form>
-
-                        </div> <!-- end .appointment-form-wrapper  -->
-
-                    </div> <!--  end .col-lg-6 -->                    
-                    
-                </div> <!--  end .row  -->                
+                </div> <!--  end .row  -->         
                  
                 
                 <div class="row counter-inline-container wow zoomIn">
@@ -1400,6 +1509,7 @@
         <script src="js/jquery.counterup.min.js"></script>
         <script src="js/venobox.min.js"></script>
         <script src="js/custom-scripts.js"></script>
+        <script src="js/calendar.js"></script>
         
     </body>
 
