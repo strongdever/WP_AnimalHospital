@@ -66,6 +66,9 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; }
+  html { 
+    scroll-behavior: smooth; 
+  }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -152,7 +155,7 @@ button, input, select, textarea {
 /* 01. GENERAL STYLING  */
 /***********************************************************************************************/
 body {
-  font: 16px/26px "Open Sans", sans-serif;
+  font: 16px/26px "Noto Sans CJK JP", sans-serif;
   color: #646464;
   font-style: normal;
   font-weight: 400;
@@ -1756,14 +1759,16 @@ a.nav-btn-highlight {
     font-weight: 600; }
   .section-heading-wrapper h2.heading-alt-style,
   .section-heading-wrapper h4.heading-alt-style {
-    font-size: 42px;
-    line-height: 46px;
+    letter-spacing: 0.15em;
+    font-size: 26px;
+    line-height: 32px;
     font-weight: 600; }
   .section-heading-wrapper h2.subheading-alt-style,
   .section-heading-wrapper h4.subheading-alt-style {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400; }
+    font-size: 36px;
+    color: #000;
+    line-height: 36px;
+    font-weight: 700; }
   .section-heading-wrapper span.heading-separator {
     display: inline-block;
     width: 2px;
@@ -2649,12 +2654,14 @@ ul.custom-bullet-list {
     position: relative; }
     .highlight-layout-2 .highlight-text h5,
     .highlight-layout-2 .highlight-text h5 a {
+      letter-spacing: 0.1em;
       position: relative;
       display: block;
       padding-top: 6px;
       margin-bottom: 0.4rem;
       font-size: 20px; }
     .highlight-layout-2 .highlight-text div {
+      letter-spacing: 0.15em;
       margin-top: 0.6rem;
       line-height: 1.6rem;
       color: #717171; }
@@ -4114,6 +4121,7 @@ a.btn-cta-2 {
 /*----- SECTION APPOINTMENT ----*/
 .form-title {
   margin-bottom: 2.4rem;
+  letter-spacing: 0.1em;
 }
 
 .calendar-schedule {
@@ -4133,9 +4141,6 @@ a.btn-cta-2 {
 }
 .schedule-wrapper .highlight-text a:hover {
   color: #FCB040;
-}
-.map-part .form-title {
-  text-align: right;
 }
 .map-part .google-map iframe {
   width: 100%;
@@ -6860,3 +6865,310 @@ ul.footer-link {
     text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
+
+
+/* common css */
+.news-wrapper {
+  display: block;
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.news-wrapper .news-item {
+  padding: 0 8px 19px 8px;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.news-wrapper .news-item .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.news-wrapper .news-item .item li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.news-wrapper .news-item .item li .date {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 100% */
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item li .date {
+    font-size: 15px;
+  }
+}
+
+.news-wrapper .news-item .item li .title {
+  display: block;
+  color: #333;
+  font-family: "Noto Sans CJK JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  /* 100% */
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item li .title {
+    font-size: 15px;
+  }
+}
+
+.news-wrapper .news-item .item li .title:hover {
+  color: #0099BD;
+  cursor: pointer;
+}
+
+.news-wrapper .news-item .item > li:not(:last-child) {
+  margin-right: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item > li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.news-wrapper .news-item .item > li:first-child {
+  display: block;
+  width: 80px;
+  min-width: 80px;
+  text-wrap: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item > li:first-child {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+}
+
+.news-wrapper .news-item .item > li:nth-child(2) {
+  display: block;
+  width: auto;
+  text-wrap: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item > li:nth-child(2) {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+}
+
+.news-wrapper .news-item .item > li:last-child {
+  display: block;
+  width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .news-wrapper .news-item .item > li:last-child {
+    width: 100%;
+  }
+}
+
+.news-wrapper .news-item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.top-news .btn-rightarrow {
+  margin: 0 auto;
+}
+
+/* components */
+.btn-rightarrow, .btn-leftarrow {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 240px;
+  padding: 15px 56px;
+  border-radius: 70px;
+  border: 1px solid #AEAEAE;
+  background: #FFF;
+  color: #333;
+  font-family: "Noto Sans CJK JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  /* 100% */
+  text-align: left;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.8, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.8, 0, 0.2, 1);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.btn-rightarrow:hover, .btn-leftarrow:hover {
+  color: #0099BD;
+  border: 1px solid #0099BD;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-rightarrow, .btn-leftarrow {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 335px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 18px 24px 18px 24px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+.btn-rightarrow svg {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-rightarrow svg {
+    margin-left: 24px;
+  }
+}
+
+.btn-rightarrow:hover svg {
+  -webkit-animation: bounce-right 0.8s infinite;
+          animation: bounce-right 0.8s infinite;
+}
+
+@-webkit-keyframes bounce-right {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  /* 60% {
+          transform: translateX(12px);
+        } */
+}
+
+@keyframes bounce-right {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  /* 60% {
+          transform: translateX(12px);
+        } */
+}
+
+.btn-leftarrow svg {
+  margin-right: 10px;
+}
+
+.btn-leftarrow:hover svg {
+  -webkit-animation: bounce-left 0.8s infinite;
+          animation: bounce-left 0.8s infinite;
+}
+
+@-webkit-keyframes bounce-left {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  /* 60% {
+          transform: translateX(12px);
+        } */
+}
+
+@keyframes bounce-left {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  /* 60% {
+          transform: translateX(12px);
+        } */
+}
+
+
+.category {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 6px 14px;
+  text-wrap: nowrap;
+  background-color: #D5E3EC;
+  border-radius: 50px;
+  color: #333;
+  font-family: "Noto Sans CJK JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+@media only screen and (max-width: 768px) {
+  .category {
+    padding: 4px 12px;
+    font-size: 13px;
+  }
+}
+
+.category:hover {
+  background-color: #3472A1;
+  color: #fff;
+}
