@@ -315,7 +315,6 @@
 
                   /* -------- gallery navigation -------- */
                   function navigateGall(destination) {
-
                       if (destination.length < 1) {
                         return false;
                       }
