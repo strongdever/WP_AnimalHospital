@@ -2723,6 +2723,8 @@ ul.custom-bullet-list {
       color: #2A100F; }
   .highlight-layout-2 .highlight-text {
     position: relative; }
+    .highlight-layout-2 .highlight-text .phone-num {
+      font-family: 'Montserrat'; }
     .highlight-layout-2 .highlight-text h5,
     .highlight-layout-2 .highlight-text h5 a {
       letter-spacing: 0.1em;
@@ -3797,6 +3799,23 @@ a.latest-date {
   margin: auto 0;
 }
 
+@media only screen and (max-width:768px) {
+  .schedule-wrapper {
+    margin-top: 32px;
+    margin-bottom: 0;
+    padding: 0 24px;
+  }
+
+  .schedule-wrapper .highlight-layout-2{
+    padding: 0;
+    margin: 0;
+  }
+
+  .calendar-schedule {
+    margin-bottom: 0;
+  }
+}
+
 .schedule-wrapper .highlight-text {
   margin-bottom: 0.6rem;
 }
@@ -3809,6 +3828,17 @@ a.latest-date {
 .map-part .google-map iframe {
   width: 100%;
   aspect-ratio: 2 / 1;
+}
+
+@media only screen and (max-width:768px) {
+  .map-wrapper {
+    margin-top: 24px;
+    padding: 0 24px;
+  }
+  .map-wrapper .highlight-layout-2 {
+    padding: 0;
+    margin: 0;
+  }
 }
 .appoinment-person {
   position: relative;
@@ -5101,6 +5131,10 @@ footer {
   padding: 80px 0 24px; }
   .footer-widget-area .footer-widget {
     margin-bottom: 32px; }
+    @media only screen and (max-width:768px) {
+      .footer-widget-area .footer-widget {
+        margin-bottom: 10; }
+    }
     .footer-widget-area .footer-widget .footer-logo {
       margin-bottom: 15px; }
   .footer-widget-area .footer-widget-header h3 {
@@ -5215,7 +5249,13 @@ footer {
   padding: 32px 0; }
   .footer-contents .copyright-text {
     line-height: 24px; }
-
+  @media only screen and (max-width: 768px) {
+    .footer-contents {
+      padding: 0 0 10px 0; }
+      .footer-contents .copyright-text {
+        padding-top: 10px !important; }
+  }
+  
 ul.footer-link {
   margin-top: 10px;
   clear: both;
@@ -6384,7 +6424,7 @@ ul.footer-link {
       font-weight: 400; }
 
   .section-content-block {
-    padding: 42px 0; }
+    padding: 60px 0; }
 
   .section-heading {
     font-size: 32px;
@@ -6417,13 +6457,17 @@ ul.footer-link {
       font-size: 20px;
       margin: 40px 0 10px; }
     #slider_1 .slider-content h2 {
-      font-size: 32px;
+      font-size: 24px;
       line-height: 36px;
       padding-bottom: 0px;
-      margin-bottom: 16px; }
+      margin-bottom: 8px !important;
+      letter-spacing: 0.05em; }
       #slider_1 .slider-content h2:after {
         display: none; }
     #slider_1 .slider-content h3 {
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      line-height: 26px;
       /*display:none;*/ }
     #slider_1 .slider-content a.banner-video-icon {
       border: 2px solid #f2f2f2;
@@ -6553,11 +6597,11 @@ ul.footer-link {
       padding: 24px 0px; }
 
   .about-footer {
-    margin-bottom: 32px;
-    padding-bottom: 22px; }
+    margin-bottom: 48px;
+    padding-bottom: 0; }
 
   .footer-widget-area {
-    padding: 42px 0 0 0; }
+    padding: 60px 0 0 0; }
 
   .footer-widget {
     margin-bottom: 36px; }
@@ -6757,6 +6801,12 @@ ul.footer-link {
   .top-service .d-md-block.steps-right {
     right: 50px !important;
     transform: translateY(-49px) !important;
+  }
+  .top-service .service-block-1 .service-content .desc {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 16px;
   }
 }
 
@@ -6970,7 +7020,7 @@ ul.footer-link {
   .btn {
     max-width: 335px;
     width: 100%;
-    padding: 16px 20px 16px 24px;
+    padding: 10px 24px;
   }
 }
 
@@ -7069,5 +7119,55 @@ ul.footer-link {
 @media only screen and (max-width: 767px) {
   .desc {
     font-size: 15px;
+  }
+}
+
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+.tc {
+  display: block !important;
+}
+
+.tb {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media print, screen and (max-width: 991px) {
+  .tc {
+    display: none !important;
+  }
+  .tb {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+}
+
+@media print, screen and (min-width: 769px) {
+  .pc-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sp-hide {
+    display: none !important;
   }
 }
