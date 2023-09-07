@@ -1,206 +1,164 @@
-    <div class="fixed-btns mobile">
-            <ul class="contact-btns">
-                <li>
-                    <a class="btn long-term" href="https://go.cxo-jinzaibank.jp/l/1022123/2023-08-02/bcd7">
-                        <span>中長期のキャリア相談</span>
-                    </a>    
-                </li>
-                <li>
-                    <a class="btn job-consult" href="https://go.cxo-jinzaibank.jp/l/1022123/2023-04-14/3byc">
-                        <span>具体的な転職相談</span>
-                    </a>    
-                </li>
-            </ul>
-        </div>
+        <!-- START FOOTER 05 -->
 
-        <div class="fixed-btns window">
-            <div class="end-wrapper">
-                <img class="female" src="<?php echo T_DIRE_URI; ?>/assets/img/female-half.png" alt="">
-                <ul class="contact-btns">
-                    <li>
-                        <p class="desc">
-                        ＼気軽な相談からはじめたい方／
-                        </p>
-                        <a class="btn long-term" href="https://go.cxo-jinzaibank.jp/l/1022123/2023-08-02/bcd7">
-                            <span>中長期のキャリア相談</span>
-                        </a>    
-                    </li>
-                    <li>
-                        <p class="desc">
-                        ＼CxO人材として転職したい方／
-                        </p>   
-                        <a class="btn job-consult" href="https://go.cxo-jinzaibank.jp/l/1022123/2023-04-14/3byc">
-                            <span>具体的な転職相談</span>
-                        </a>
-                    </li>
-                </ul>
-                <img class="male" src="<?php echo T_DIRE_URI; ?>/assets/img/male-half.png" alt="">
-            </div>
-        </div>
-    <footer id="footer">
-        <ul class="contact-wrapper">
-            <li>
-                <img src="<?php echo T_DIRE_URI; ?>/assets/img/female.png">
-                <p class="desc">
-                ＼気軽な相談からはじめたい方／
-                </p>
-                <a class="btn female" href="https://go.cxo-jinzaibank.jp/l/1022123/2023-08-02/bcd7"><span>中長期のキャリア相談をする</span></a>
-            </li>
-            <li>
-                <img src="<?php echo T_DIRE_URI; ?>/assets/img/male.png">
-                <p class="desc">
-                ＼CxO人材として転職したい方／
-                </p>
-                <a class="btn male" href="https://go.cxo-jinzaibank.jp/l/1022123/2023-04-14/3byc"><span>具体的な転職相談をする</span></a>
-            </li>
-        </ul>
-        <div class="footer-main">
-            <ul class="footer-wrapper">
-                <li>
-                    <ul class="logo-wrapper">
-                        <li>
-                            <a href=""><img class="logo" src="<?php echo T_DIRE_URI; ?>/assets/img/logo.png" alt="CxO人材バンク"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/cxo_jinzaibank" target="_blank"><img class="social twitter" src="<?php echo T_DIRE_URI; ?>/assets/img/twitter.png" alt="CxO人材バンク"></a>
-                            <a href="https://www.youtube.com/@CxORirekishoChannel" target="_blank"><img class="social instegram" src="<?php echo T_DIRE_URI; ?>/assets/img/instegram.png" alt="CxO人材バンク"></a>
-                        </li>
-                        <li>
-                            <img class="mark" src="<?php echo T_DIRE_URI; ?>/assets/img/mark.png" alt="CxO人材バンク">
-                            <div class="desc">CxO人材バンクは、個人情報保護に取り組む事業者であることを示す「プライバシーマーク」を取得しています。</div>
-                        </li>
-                    </ul>
-                </li>
+        <footer class="section-custom-bg" data-bg_img="<?php echo T_DIRE_URI; ?>/assets/img/footer_custom_bg.jpg" data-bg_opacity=".9" data-bg_color="#edf0f2" data-bg_position="center bottom">            
 
-                <li>
-                    <nav class="footer-nav">
-                        <ul class="nav-menu">
-                            <li>
-                                <span>サービスについて</span>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'news'; ?>" class="menu-link active">
-                                    <span>CxO人材バンクNEWS</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'features'; ?>" class="menu-link">
-                                    <span>CxO人材バンクの特長</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'case'; ?>" class="menu-link">
-                                    <span>転職成功事例</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'flow'; ?>" class="menu-link">
-                                    <span>転職支援の流れ</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'features/background'; ?>" class="menu-link">
-                                    <span>CxO人材バンクのバックグラウンド</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'features/media'; ?>" class="menu-link">
-                                    <span>CxO人材バンク関連コミュニティ</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </li>
-                
-                <li>
-                    <nav class="footer-nav">
-                        <ul class="nav-menu">
-                            <li>
-                                <span>コラム</span>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'interview'; ?>" class="menu-link active">
-                                    <span>CxOインタビュー</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'research'; ?>" class="menu-link">
-                                    <span>CxO人材研究所</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'consult'; ?>" class="menu-link">
-                                    <span>転職相談室</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </li>
-                
-                <li>
-                    <nav class="footer-nav">
-                        <ul class="nav-menu">
-                            <li>
-                                <span>採用担当者の方へ</span>
-                            </li>
-                            <li>
-                                <a href="https://go.cxo-jinzaibank.jp/l/1022123/2023-04-14/3c38" class="menu-link active">
-                                    <span>採用担当者様(正社員雇用)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.cxo-jinzaibank.jp/l/1022123/2023-04-14/3c38" class="menu-link">
-                                    <span>採用担当者様(CxO人材バンク for 業務委託)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://go.cxo-jinzaibank.jp/l/1022123/2023-04-14/3c38" class="menu-link">
-                                    <span>採用担当者様(社外取締役・監査役)</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </li>
+            <section class="footer-widget-area pb-0">
+                <img src="<?php echo T_DIRE_URI; ?>/assets/img/footer_animal.png" class="footer-background">
+                <div class="container">                    
 
-                <li>
-                    <nav class="footer-nav">
-                        <ul class="nav-menu">
-                            <li>
-                                <span>その他</span>
-                            </li>
-                            <li>
-                                <a href="https://ir-robotics.co.jp/" class="menu-link active">
-                                    <span>運営会社</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo HOME . 'rule'; ?>" class="menu-link">
-                                    <span>利用規約</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://ir-robotics.co.jp/privacypolicy/" class="menu-link" target="_blank">
-                                    <span>プライバシーポリシー</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </li>
-            </ul>
-        </div>
-        <span class="line"></span>
-        <div class="footer-bottom">
-            <p class="copyright">© IR robotics All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- <script type="text/javascript" src="assets/js/slick.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script> -->
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <!-- <script type="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script> -->
-    <script src="https://kit.fontawesome.com/8cbdf0a85f.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="<?php echo T_DIRE_URI; ?>/assets/js/common.js"></script>
+                    <div class="row">
 
-    <?php wp_footer(); ?>
-</body>
+                        <div class="col-lg-4 col-md-6 col-12">
+
+                            <div class="footer-widget text-dark-color">
+
+                                <div class="sidebar-widget-wrapper">
+
+                                    <div class="footer-widget-header clearfix">
+                                        <h3 class="text-dark-color">CONTACT US</h3>
+                                    </div>  <!--  end .footer-widget-header --> 
+
+                                    <div class="textwidget">
+                                        <div class="footer-contact footer-address">
+                                            <i class="fa fa-location-arrow fa-contact"></i>
+                                            <p class="text-dark-color">所在地: 〒243-0425<br/>神奈川県海老名市中野1-31-7</p>
+                                        </div>
+                                        <div class="footer-contact footer-tel">
+                                            <i class="fa fa-phone fa-contact"></i>
+                                            <p class="text-dark-color">TEL :&nbsp; <span>046-238-3777</span></p>                              
+                                        </div>
+                                        <div class="footer-contact footer-email">
+                                            <i class="fa fa-envelope-o fa-contact"></i>
+                                            <p class="text-dark-color"><a>support-us@petmate.com</a></p>
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end .footer-widget-wrapper  -->
+
+                            </div> <!--  end .footer-widget  -->
+
+                        </div> <!--  end .col-md-4 col-sm-12 --> 
+                        
+                        <div class="col-lg-4 col-md-12 col-12">
+
+                            <div class="footer-widget">
+
+                                <div class="sidebar-widget-wrapper">
+
+                                    <div class="textwidget about-footer"> 
+
+                                        <div class="footer-about-text">
+                                            <a href="<?php echo HOME; ?>">
+                                                <img src="<?php echo T_DIRE_URI; ?>/assets/img/logo.png" alt="こんどう動物病院様" class="footer-logo img-responsive mb-0">
+                                            </a>
+                                            <p class="clearfix text-dark-color mt-0">
+                                                飼い主様と動物さんが末永く健康で、ともに楽しく幸せな時間を過ごせるように、<br>
+                                                体調や様子の変化が見られる場合、遠慮なさらずに気になったことはお伝えください。</p>
+                                        </div>    
+
+                                        <!-- <div class="social-icons margin-top-24  text-light-color">
+
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#">
+                                                <i class="fa fa-pinterest-p"></i>
+                                            </a>
+
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+
+                                            <a href="#">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                        </div> -->
+
+                                    </div>
+
+                                </div> <!-- end .footer-widget-wrapper  -->
+
+                            </div> <!--  end .footer-widget  -->
+
+                        </div> <!--  end .col-md-4 col-sm-12 -->
+
+                        <div class="col-lg-4 col-md-6 col-12">
+
+                            <div class="footer-widget text-dark-color">
+
+                                <div class="sidebar-widget-wrapper">
+                                    <div class="textwidget">
+                                        <ul class="opening-shedule">
+                                            <li class="text-dark-color">
+                                                <a href="<?php echo HOME . 'news'; ?>"><span>新着情報</span></a>          
+                                            </li>
+                                            <li class="te<?php echo HOME . 'services'; ?>xt-dark-color">
+                                                <a href=""><span>診察内容</span></a>   
+                                            <li class="text-dark-color">
+                                                <a href="<?php echo HOME . 'prevention'; ?>"><span>予防について</span></a>
+                                            </li>
+                                            <li class="text-dark-color">
+                                                <a href="<?php echo HOME . 'aboutus'; ?>"><span>病院紹介</span></a>
+                                            </li>                                        
+                                        </ul>
+
+                                    </div>  
+
+                                </div> <!-- end .footer-widget-wrapper  -->
+
+                            </div> <!--  end .footer-widget  -->
+
+                        </div> <!--  end .col-md-4 col-sm-12 -->  
+
+                    </div> <!-- end row  -->
+
+                </div> <!-- end .container  -->
+
+            </section> <!--  end .footer-widget-area  -->
+
+            <!--FOOTER CONTENT  -->
+
+            <section class="footer-contents">
+
+                <div class="container">
+
+                    <div class="row clearfix">
+                        <div class="col-md-12 clearfix text-center  border-top-1-dark">
+                            <p class="copyright-text text-dark-color pt-4">Copyright &copy; <a href="https://bluewindlab.net/">こんどう動物病院</a>&nbsp;&nbsp;<br class=sp>All Rights Reserved</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </footer>
+
+        <!-- BACK TO TOP BUTTON  -->
+
+        <a id="backTop" data-icon=""><img src="<?php echo T_DIRE_URI; ?>/assets/img/pagetop.png" alt="pageto" /></a>
+
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/jquery.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/wow.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/jquery.backTop.min.js "></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/waypoints.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/waypoints-sticky.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/jquery.stellar.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.6/venobox.min.js"></script>
+        <script src="<?php echo T_DIRE_URI; ?>/assets/js/custom-scripts.js"></script>
+        <!-- <script src="<?php echo T_DIRE_URI; ?>/assets/js/calendar.js"></script> -->
+
+        <?php wp_footer(); ?>
+    </body>
 
 </html>
