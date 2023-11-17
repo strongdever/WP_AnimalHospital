@@ -61,9 +61,9 @@ $path_parts = pathinfo($path_parts);
 <?php endif; ?>
 
 
-    <div id="preloader">
+    <!-- <div id="preloader">
         <span class="margin-bottom"><img src="<?php echo T_DIRE_URI; ?>/assets/img/loader.gif" alt="Loading......" /></span>
-    </div>
+    </div> -->
 
     <!--  HEADER STYLE  02-->
 
@@ -128,13 +128,18 @@ $path_parts = pathinfo($path_parts);
                                 <div class="col-md-6 col-12">
                                     <div class="header-icon-box">
                                         <div class="icon-container">
-                                            <i class="fa fa-calendar-check-o"></i>
+                                            <i class="fa fa-phone fa-contact"></i>
                                         </div>
                                         <div class="text header-tel">
-                                            <span class="head-heading">Tel&nbsp;:&nbsp;</span>                                                
-                                            <span class="head-content">
+                                            <span class="head-heading">Tel&nbsp;:&nbsp;</span>                                              
+                                            <span class="head-content pc">
                                                 046-238-3777
                                             </span>
+                                            <a href="tel:0462383777" class="sp">
+                                                <span class="head-content">
+                                                    046-238-3777
+                                                </span>
+                                            </a>
                                         </div>
                                     </div><!-- end .header-icon-box  -->
                                 </div> <!-- end .col-md-4  -->
@@ -151,50 +156,37 @@ $path_parts = pathinfo($path_parts);
             <div id="menu_area" class="menu-area border-bottom-1p-solid-light">
                 <div class="container">
                     <div class="row">
-                        <nav class="navbar navbar-light navbar-expand-lg mainmenu col-lg-9 col-12">
+                        <nav class="navbar navbar-light navbar-expand-lg mainmenu col-lg-12 col-12">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
-                                    <li><a href="<?php echo HOME . 'news'; ?>" title="新着情報">新着情報</a></li>
+                                    <li><a href="<?php echo HOME; ?>" title="ホーム">ホーム</a></li>
+                                    <li><a href="<?php echo HOME . 'topics'; ?>" title="新着情報">新着情報</a></li>
                                     <li><a href="<?php echo HOME . 'services'; ?>" title="診察内容">診察内容</a></li>
 
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" href="<?php echo HOME . 'prevention'; ?>" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">予防について</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="./prevention.html#vaccin">予防接種</a></li>
-                                            <li><a href="./prevention.html#rabies">狂犬病予防注射</a></li>
-                                            <li><a href="./prevention.html#filariasis">フィラリア症</a></li>
-                                            <li><a href="./prevention.html#fleas">ノミ・ダニの予防・駆除 </a></li>
-                                            <li><a href="./prevention.html#check">健康診断</a></li>
-                                            <li><a href="./prevention.html#microchip">マイクロチップ</a></li>
-                                            <li><a href="./prevention.html#eyes">眼の病気と予防</a></li>
-                                            <li><a href="./prevention.html#skin">皮膚の病気と予防</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#vaccination'; ?>">予防接種</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#hydrophobia'; ?>">狂犬病予防注射</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#filaria'; ?>">フィラリア症</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#nomidani'; ?>">ノミ・ダニの予防・駆除 </a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#checkup'; ?>">健康診断</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#microchip'; ?>">マイクロチップ</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#eyes'; ?>">眼の病気と予防</a></li>
+                                            <li><a href="<?php echo HOME . 'prevention/#skin'; ?>">皮膚の病気と予防</a></li>
                                         </ul>
                                     </li>
 
 
                                     <li><a href="<?php echo HOME . 'aboutus'; ?>" title="病院紹介">病院紹介</a></li>
-                                    
+                                    <li><a href="<?php echo HOME . '#accessmap'; ?>" title="アクセス">アクセス</a></li>
 
                                 </ul>
                             </div>
                         </nav>
-                        
-                        
-                        <!--  Booking Icon  -->
-                        
-                        <div class="navbar-header col-lg-3 col-12 header-booking">
-                            <div class="navbar-contact">
-
-                                <div class="top-bar-social mt-12">
-                                    <a href="https://step.petlife.asia/petreserve/subjectlist/index/cid/s9033804?SITE_CODE=hp">
-                                        <img src="<?php echo T_DIRE_URI; ?>/assets/img/booking-mark.png"></img>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                         
                     </div>
                 </div>

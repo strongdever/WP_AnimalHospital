@@ -89,10 +89,10 @@
                 <div class="row section-heading-wrapper">
 
                     <div class="col-md-12 col-sm-12 text-center">
-                        <h4 class="heading-alt-style text-capitalize text-dark-color">CALENDAR</h4>
+                        <h4 class="heading-alt-style text-capitalize text-dark-color">SCHEDULE</h4>
                         <span class="heading-separator heading-separator-horizontal"></span>
                         <h2 class="subheading-alt-style pl-lg-5 pl-0 pr-lg-5 pr-0">
-                            日程カレンダー
+                        診察スケジュール
                         </h2>
                     </div> <!-- end .col-sm-12  --> 
 
@@ -100,7 +100,7 @@
 
                 <div class="row calendar-schedule">
 
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 calendar-wrapper">
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 calendar-wrapper">
 
                         <div id="custom-calendar">
                             
@@ -140,7 +140,7 @@
 
                     </div> <!--  end .col-lg-6 -->   
 
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 schedule-wrapper">
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 schedule-wrapper">
                         
                         <div class="row">
                             
@@ -156,10 +156,10 @@
                                         <div>毎週火曜日、祝日</div>
                                     </div> <!-- end .service-text  -->
                                     <div class="highlight-text">
-                                        <h5>カレンダーの記号</h5>
+                                        <h5>スケジュールの記号</h5>
                                         <div><span class="business-day">〇</span>：診療</div>
                                         <div><span class="nonbusiness-day">ー</span>：休診</div>
-                                        <div><span class="unknown-day">△</span>：お知らせ（<a href="./topics.html">新着情報</a>をご確認ください）<br>
+                                        <div><span class="unknown-day">△</span>：お知らせ（<a href="<?php echo HOME . 'topics'; ?>">新着情報</a>をご確認ください）<br>
                                         カレンダーの上の<span class="unknown-day">△</span>マークをクリックすると、その日のスケジュール変更内容を確認することもできます。
                                     </div>
                                     </div> <!-- end .service-text  -->
@@ -194,55 +194,42 @@
                 <div class="row">
                     
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        
+                    <?php
+                        $args = [
+                            'post_type' => 'topics',
+                            'post_status' => 'publish',
+                            'paged' => $paged,
+                            'posts_per_page' => 5,
+                        ];
+                        $custom_query = new WP_Query( $args );
+                        if( $custom_query->have_posts() ) :
+                        ?>
                         <ul class="news-wrapper">
+                            <?php while($custom_query->have_posts()) : $custom_query->the_post(); ?>
                             <li class="news-item">
                                 <ul class="item">
                                     <li>
-                                        <span class="date">2023.08.08</span>
+                                        <span class="date"><?php the_time('Y.m.d'); ?></span>
                                     </li>
+                                    <?php
+                                    $post_cats = get_the_terms(get_the_ID(), 'topics-category');
+                                    if( $post_cats) :
+                                        foreach($post_cats as $post_cat) :
+                                    ?>
                                     <li>
-                                        <a class="category" href="">キャティゴリ
-                                        </a>
+                                        <a class="category" href="<?php echo get_term_link($post_cat); ?>"><?php echo $post_cat->name; ?></a>
                                     </li>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                     <li>
-                                        <a class="title" href="">ここにタイトルが入ります。
-                                        </a>
+                                        <a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="news-item">
-                                <ul class="item">
-                                    <li>
-                                        <span class="date">2023.08.08</span>
-                                    </li>
-                                    <li>
-                                        <a class="category" href="">キャティゴリ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="title" href="">ここにタイトルが入ります。
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="news-item">
-                                <ul class="item">
-                                    <li>
-                                        <span class="date">2023.08.08</span>
-                                    </li>
-                                    <li>
-                                        <a class="category" href="">キャティゴリ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="title" href="">ここにタイトルが入ります。
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                            <?php endwhile; ?>
                         </ul>
-                        <a class="btn-rightarrow" href="">
+                        <?php endif; ?>
+                        <a class="btn-rightarrow" href="<?php echo HOME . 'topics'; ?>">
                             ニュース記事一覧
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z" fill="#1BA2C5"/>
@@ -257,7 +244,7 @@
 
         <!-- SECTION CVALENDAR-->
         
-        <section class="section-content-block section-pure-white-bg map-schedule"  id="highlights-3">
+        <section class="section-content-block section-pure-white-bg map-schedule"  id="accessmap">
             <div class="container">
                 
                 <div class="row section-heading-wrapper">
@@ -326,7 +313,7 @@
                         <h4 class="heading-alt-style text-capitalize text-dark-color">Our Services</h4>
                         <span class="heading-separator heading-separator-horizontal"></span>
                         <h2 class="subheading-alt-style pl-lg-5 pl-0 pr-lg-5 pr-0">
-                            診 療 内 容
+                            診療内容
                         </h2>
                     </div> <!-- end .col-sm-12  --> 
                     <div class="col-md-12 col-sm-12 text-center">
@@ -355,7 +342,7 @@
                                     <p class="desc">
                                         犬、猫の診療を行っております。
                                     </p>
-                                    <a href="service-details.html" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
+                                    <a href="<?php echo HOME . 'services/#target'; ?>" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
                                 </div>
                             
                         </article>
@@ -378,7 +365,7 @@
                                     <p class="desc">
                                         当院では、狂犬病予防接種のほか犬、猫の混合ワクチン接種を行っております。
                                     </p>
-                                    <a href="service-details.html" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
+                                    <a href="<?php echo HOME . 'services/#vaccin'; ?>" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
                                 </div>
                             
                         </article>
@@ -401,7 +388,7 @@
                                     <p class="desc">
                                         レントゲン、エコー、心電図、血液検査機器などは扱っております。
                                     </p>
-                                    <a href="service-details.html" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
+                                    <a href="<?php echo HOME . 'services/#checkup'; ?>" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
                                 </div>
                             
                         </article>
@@ -422,7 +409,7 @@
                                 <p class="desc">
                                     入院設備あり
                                 </p>
-                                <a href="service-details.html" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
+                                <a href="<?php echo HOME . 'services/#facilities'; ?>" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
                             </div> 
 
                         </article>
@@ -442,7 +429,7 @@
                                 <p class="desc">
                                     いざという時のためにマイクロチップの装着を！！
                                 </p>
-                                <a href="service-details.html" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
+                                <a href="<?php echo HOME . 'services/#microchip'; ?>" class="btn btn-theme btn-small btn-inline btn-semi-rounded"><span>詳細を見る</span></a>
                             </div>
 
                         </article>
@@ -454,7 +441,7 @@
                     <div class="stepsTrigger mtmt steps"></div>
                 </div>
                 <div class="row top-service-detail">
-                    <a class="btn-rightarrow" href="">
+                    <a class="btn-rightarrow" href="<?php echo HOME . 'services'; ?>">
                         詳しくはこちら
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z" fill="#1BA2C5"/>
@@ -470,7 +457,104 @@
 
         </section> <!--  end .section-content-block -->    
         
-        <!--  GALLERY CONTENT  -->
+        <section class="section-content-block parallax top-prevention" data-bg_img="<?php echo T_DIRE_URI; ?>/assets/img/service_custom_bg.jpg" data-bg_color="#FFFFFF" data-bg_opacity="0.5" data-stellar-background-ratio="0.9">
+
+            <div class="container">
+                
+                <div class="row section-heading-wrapper">
+
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <h4 class="heading-alt-style text-capitalize text-dark-color">Prevention</h4>
+                        <span class="heading-separator heading-separator-horizontal"></span>
+                        <h2 class="subheading-alt-style pl-lg-5 pl-0 pr-lg-5 pr-0">
+                        予防について
+                        </h2>
+                    </div> <!-- end .col-sm-12  --> 
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <p class="desc pl-lg-5 pl-0 pr-lg-5 pr-0 text-center">
+                        ペットの健康管理の基本は、「予防がすべて」といっても過言ではありません。<br>
+                        防げる病気を予防し、健康な心身を維持することは、<br class='pc'>
+                        幸せなペットライフを送るために最も重要なポイントです。<br>
+                        こんどう動物病院では、あなたのペットに最適の予防プログラムをご提案致します。
+                        </p>
+                    </div> <!-- end .col-sm-12  --> 
+                    
+                </div>
+
+                <div class="row top-prevent-content">
+
+                    <div class="container prevent-items">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#vaccination'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--vaccine.webp" alt="">
+                                    <div class="col-9">予防接種</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#hydrophobia'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--hydrophobia.webp" alt="">
+                                    <div class="col-9">狂犬病予防注射</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#filaria'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--filaria.webp" alt="">
+                                    <div class="col-9">フィラリア予防</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#nomidani'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--nomidani.webp" alt="">
+                                    <div class="col-9">ノミ・ダニの予防・駆除</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#checkup'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--checkup.webp" alt="">
+                                    <div class="col-9">健康診断</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#microchip'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--microchip.webp" alt="">
+                                    <div class="col-9">マイクロチップ</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#eyes'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--eyes.webp" alt="">
+                                    <div class="col-9">眼の病気と予防</div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="row item" href="<?php echo HOME . 'prevention/#skin'; ?>">
+                                    <img class="col-3" src="<?php echo T_DIRE_URI; ?>/assets/img/icon--skin.webp" alt="">
+                                    <div class="col-9">皮膚の病気と予防</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  <!--  end .row  --> 
+                <div class="row top-prevent-detail">
+                    <a class="btn-rightarrow" href="<?php echo HOME . 'prevention'; ?>">
+                        詳しくはこちら
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z" fill="#1BA2C5"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div> <!--  end .container  -->
+
+        </section> <!--  end .section-content-block -->   
 
         <section class="section-content-block .section-pure-white-bg top-aboutus">
 
@@ -478,15 +562,20 @@
 
                 <div class="row section-heading-wrapper">
 
-                    <div class="col-md-12 col-sm-12 text-center">
+                    <div class="col-md-12 col-sm-12 text-center mb-4">
                         <h4 class="heading-alt-style text-capitalize text-dark-color">ABOUT US</h4>
                         <span class="heading-separator heading-separator-horizontal"></span>
                         <h2 class="subheading-alt-style">
                             病院紹介
                         </h2>
                     </div> <!-- end .col-sm-12  --> 
-
-                </div>
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <p class="desc text-center">
+                        *クレジットカードの取り扱いも始めました。<br>
+                        *ペット保険の「アニコム」と「アイペット」を取り扱っております。
+                        </p>
+                    </div>
+                </div>                    
 
             </div>
 
@@ -594,7 +683,7 @@
 
                 </div> <!-- end .row  -->
                 <div class="row top-aboutus-detail">
-                    <a class="btn-rightarrow" href="">
+                    <a class="btn-rightarrow" href="<?php echo HOME . 'aboutus'; ?>">
                         詳しくはこちら
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z" fill="#1BA2C5"/>
@@ -720,7 +809,7 @@
                         if( curr_year == <?php echo $unknown_yy; ?>) {
                             if(curr_month == <?php echo $unknown_mm; ?> + '月' ) {
                                 if( curr_day == <?php echo $unknown_dd; ?> ) {
-                                    day.querySelectorAll('.business-mark')[0].innerHTML = `<div class='unknown-day'><a href="<?php the_permalink(); ?>">△</a></div>`
+                                    day.querySelectorAll('.business-mark')[0].innerHTML = `<div class='unknown-day'><a href="<?php the_permalink(); ?>" target='_black'>△</a></div>`
                                 }
                             }
                         }

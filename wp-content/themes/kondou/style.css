@@ -28,26 +28,48 @@ Text Domain: cxojinzai
   display: none;
 }
 
-body#bodynews .header .header-nav .nav-menu > li:first-child .menu-link {
-  color: #0099BD;
+#bodykondou .mainmenu #navbarSupportedContent ul li:first-child a {
+  color: #fff;
+  background-color: #FCB040;
 }
 
-body#bodyfeatures .header .header-nav .nav-menu > li:nth-child(2) .menu-link {
-  color: #0099BD;
+#bodytopics .mainmenu #navbarSupportedContent ul li:nth-child(2) a {
+  color: #fff;
+  background-color: #FCB040;
 }
 
-body#bodycase .header .header-nav .nav-menu > li:nth-child(3) .menu-link {
-  color: #0099BD;
+#bodyservices .mainmenu #navbarSupportedContent ul li:nth-child(3) a {
+  color: #fff;
+  background-color: #FCB040;
 }
 
-body#bodyflow .header .header-nav .nav-menu > li:nth-child(4) .menu-link {
-  color: #0099BD;
+#bodyprevention .mainmenu #navbarSupportedContent ul li:nth-child(4) a {
+  color: #fff;
+  background-color: #FCB040;
 }
 
-body#bodyinterview .header .header-nav .nav-menu > li:nth-child(5) .menu-link {
-  color: #0099BD;
+#bodyaboutus .mainmenu #navbarSupportedContent ul li:nth-child(5) a {
+  color: #fff;
+  background-color: #FCB040;
 }
 
-body#bodycolumn .header .header-nav .nav-menu > li:nth-child(6) .menu-link {
-  color: #0099BD;
+.mainmenu #navbarSupportedContent ul li.dropdown .dropdown-menu li a {
+  color: #333 !important;
+}
+
+.mainmenu #navbarSupportedContent ul li.dropdown .dropdown-menu li a:hover {
+  color: #FFF !important;
+  background-color: #FCB040 !important;
+}
+
+@media only screen and (min-width:768px) {
+  .mainmenu #navbarSupportedContent ul li.dropdown .dropdown-menu li a {
+    background-color: #FFF !important;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .mainmenu #navbarSupportedContent ul li.dropdown .dropdown-menu li a {
+    background-color: unset !important;
+  }
 }

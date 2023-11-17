@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
 
-<main id="main">
+<main id="page-404" class="page-404">
 
   <section class="p_breadcrumbs_section">
     <div class="container">
@@ -30,10 +30,6 @@ get_header();
       </div>
     </div>
   </section>
-  
-  <?php the_content(); ?>
-
-  <?php get_template_part('template', 'parts/contact_intro'); ?>
 
 </main>
 

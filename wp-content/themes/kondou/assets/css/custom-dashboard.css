@@ -1,0 +1,46 @@
+
+/* schedule post css styling setting */
+.menu-icon-schedule .dashicons-admin-post:before {
+    /* background-image: url(../img/calendar.png);
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-size: 17px 17px;
+    width: 17px;
+    content: '\f508' !important;
+}
+
+.menu-icon-schedule .wp-submenu-wrap {
+    display: none !important;
+}
+
+.post-type-schedule .wrap {
+    padding-top: 50px !important;   
+}
+
+.post-type-schedule .wrap .wp-heading-inline {
+    display: none !important;
+}
+
+.post-type-schedule .wrap .page-title-action {
+    display: none !important;
+}
+
+.post-type-schedule .wrap .search-box {
+    display: none !important;
+}
+
+.post-type-schedule #screen-meta-links {
+    display: none !important;
+}
+
+.post-type-schedule .subsubsub {
+    display: none !important;
+}
+
+.post-type-schedule .tablenav {
+    display: none !important;
+}
+
+.post-type-schedule #post-body.columns-2 #postbox-container-1 {
+    display: none !important;
+}

@@ -91,3 +91,85 @@
 	/* 念の為指定しておきます */
 	font-style: normal;
 }
+
+
+/* MPLUSRounded1c */
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	/* お好きな名前にしましょう */
+	src: url('MPLUSRounded1c-Regular.ttf');
+	/* IE9以上用 */
+	src: url('MPLUSRounded1c-Regular.ttf') format('embedded-opentype'),
+		/* IE8以前用 */
+		url('MPLUSRounded1c-Regular.ttf') format('ttf'),
+		/* モダンブラウザ用 */
+		url('MPLUSRounded1c-Regular.ttf') format('truetype');
+	/* iOS, Android用 */
+	font-weight: 400;
+	/* 念の為指定しておきます */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NMPLUSRounded1c';
+	/* お好きな名前にしましょう */
+	src: url('NMPLUSRounded1c-Medium.ttf');
+	/* IE9以上用 */
+	src: url('NMPLUSRounded1c-Medium.ttf') format('embedded-opentype'),
+		/* IE8以前用 */
+		url('NMPLUSRounded1c-Medium.ttf') format('ttf'),
+		/* モダンブラウザ用 */
+		url('NMPLUSRounded1c-Medium.ttf') format('truetype');
+	/* iOS, Android用 */
+	font-weight: 500;
+	/* 念の為指定しておきます */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	/* お好きな名前にしましょう */
+	src: url('MPLUSRounded1c-Black.ttf');
+	/* IE9以上用 */
+	src: url('MPLUSRounded1c-Black.ttf') format('embedded-opentype'),
+		/* IE8以前用 */
+		url('MPLUSRounded1c-Black.ttf') format('ttf'),
+		/* モダンブラウザ用 */
+		url('MPLUSRounded1c-Black.ttf') format('truetype');
+	/* iOS, Android用 */
+	font-weight: 900;
+	/* 念の為指定しておきます */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	/* お好きな名前にしましょう */
+	src: url('MPLUSRounded1c-Bold.ttf');
+	/* IE9以上用 */
+	src: url('MPLUSRounded1c-Bold.ttf') format('embedded-opentype'),
+		/* IE8以前用 */
+		url('MPLUSRounded1c-Bold.ttf') format('ttf'),
+		/* モダンブラウザ用 */
+		url('MPLUSRounded1c-Bold.ttf') format('truetype');
+	/* iOS, Android用 */
+	font-weight: bold;
+	/* 念の為指定しておきます */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	/* お好きな名前にしましょう */
+	src: url('MPLUSRounded1c-ExtraBold.ttf');
+	/* IE9以上用 */
+	src: url('MPLUSRounded1c-ExtraBold.ttf') format('embedded-opentype'),
+		/* IE8以前用 */
+		url('MPLUSRounded1c-ExtraBold.ttf') format('ttf'),
+		/* モダンブラウザ用 */
+		url('MPLUSRounded1c-ExtraBold.ttf') format('truetype');
+	/* iOS, Android用 */
+	font-weight: 1000;
+	/* 念の為指定しておきます */
+	font-style: normal;
+}

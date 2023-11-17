@@ -88,8 +88,9 @@ add_action('wp_head', 'my_script_constants');
 // CSS・スクリプトの読み込み
 function theme_add_files() {
     global $post;
-
+    // wp_enqueue_style('c-fontawesome-local', T_DIRE_URI.'/assets/css/font-awesome.min.css', [], '1.0', 'all');
     wp_enqueue_style('c-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', [], '1.0', 'all');
+    // wp_enqueue_style('c-v4-shims', T_DIRE_URI.'/assets/css/v4-shims.min.css', [], '1.0', 'all');
 	wp_enqueue_style('c-font-common', T_DIRE_URI.'/assets/font/fonts.css', [], '1.0', 'all');
     wp_enqueue_style('c-bootstrap', T_DIRE_URI.'/assets/css/bootstrap.min.css', [], '1.0', 'all');
     wp_enqueue_style('c-owl-carousel', T_DIRE_URI.'/assets/css/owl.carousel.css', [], '1.0', 'all');
@@ -231,5 +232,11 @@ function catch_that_image() {
     }
     return $first_img;
 }
+
+//add css style to the admin dashboard
+function custom_dashboard_css() {
+    wp_enqueue_style( 'custom-dashboard-css', T_DIRE_URI.'/assets/css/custom-dashboard.css' );
+  }
+  add_action( 'admin_enqueue_scripts', 'custom_dashboard_css' );
 
 ?>
